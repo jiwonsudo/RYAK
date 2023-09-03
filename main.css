@@ -1,0 +1,46 @@
+body {
+  background-color: #E5E5EA;
+}
+
+.medicines-section {
+  margin-top: 80px;
+  width: 100%;
+}
+
+.medicine-container {
+  width: 90%;
+  height: 90px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  background-color: #F7F7F7;
+  border-radius: 20px;
+}
+
+.medicine-image-container {
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 20px 0 0 20px;
+  background: linear-gradient(blue, darkblue);
+}
+
+.medicine-image {
+  height: 100%;
+  object-fit: contain;
+}
+
+.medicine-text-container {
+  margin: 0.7em;
+}
+
+.medicine-title {
+  margin-bottom: 0.3em;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.medicine-type, .medicine-dose {
+  margin-bottom: 0.1em;
+  font-size: 0.9em;
+  font-weight: 300;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./reset.css" rel="stylesheet">
+  <link href="./camera.css" rel="stylesheet">
+  <link href="./nav.css" rel="stylesheet">
+  <title>ryak</title>
+</head>
+<body>
+
+  <nav>
+    <a class="left-button" href="./main_edit.html">
+      <img src="./icons/left-chevron.svg">
+      <p>취소</p>
+    </a>
+    <h1>알약 촬영하기</h1>
+  </nav>
+
+  <section class="camera-section">
+    <video id="camera" class="camera-view" width="640" height="480" autoplay></video>
+    <div class="camera-overlay">
+      <div class="overlay-box">
+        <h1 class="overlay-text">화면 속 사각형에 알약이 들어오도록 촬영해 주세요.</h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="button-section">
+    <div class="buttons">
+      <a class="capture-button" id="captureButton">촬영</a>
+      <a class="manual-button">직접 입력</a>
+    </div>
+  </section>
+
+  <script src="./camera.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+body {
+  background-color: #E5E5EA;
+}
+
+.add-section {
+  width: 90%;
+  margin: 80px auto 0;
+}
+
+.add-button {
+  width: calc(100% - 1em);
+  height: 40px;
+  padding-left: 1em;
+  display: block;
+  background-color: #F7F7F7;
+  border-radius: 10px;
+  line-height: 40px;
+  color: #007AFF;
+}
+
+.medicines-section {
+  width: 90%;
+  margin: 40px auto 0;
+}
+
+.medicines-section-title {
+  margin-left: 1em;
+  font-size: 0.8em;
+  color: #8E8E93;
+}
+
+.medicine-container:first-of-type{
+  margin-top: 10px;
+}
+
+.medicine-container {
+  width: calc(100% - 1em);
+  height: 60px;
+  padding-left: 1em;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #F7F7F7;
+  /* border-radius: 10px; */
+  overflow: hidden;
+}
+
+.medicine-container:first-of-type {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.medicine-container:last-of-type {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.medicine-container:not(:last-child) {
+  border-bottom: #8E8E93 0.2px solid;
+}
+
+.medicine-image-container {
+  height: 75%;
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(blue, darkblue);
+  border-radius: 50%;
+}
+
+.medicine-image {
+  height: 100%;
+  object-fit: contain;
+}
+
+.medicine-text-container {
+  margin-left: 1em;
+}
+
+.medicine-title {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.medicine-type-dose {
+  margin-top: 0.3em;
+  font-size: 0.9em;
+  font-weight: 300;
+}
+
+.delete-button {
+  height: 100%;
+  aspect-ratio: 0.7 / 1;
+  position: absolute;
+  right: 0px;
+  background-color: #FF3B30;
+  border: none;
+  /* border-radius: 0 10px 10px 0; */
+}
+
+.delete-button img {
+  height: 40%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+

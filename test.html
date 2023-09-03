@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 업로드 폼</title>
+</head>
+<body>
+    <h1>이미지 업로드 폼</h1>
+    <form action="#" method="post" enctype="multipart/form-data" id="imageUploadForm">
+        <input type="file" name="imageFile" id="imageFileInput" accept="image/*">
+        <input type="submit" value="이미지 업로드">
+    </form>
+
+    <script>
+        const imageUploadForm = document.getElementById('imageUploadForm');
+        const imageFileInput = document.getElementById('imageFileInput');
+
+        imageUploadForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // 기본 폼 제출 동작을 막습니다.
+
+            const formData = new FormData();
+            const selectedFile = imageFileInput.files[0]; // 선택한 이미지 파일 가져오기
+
+            if (selectedFile) {
+                formData.append('raw_image', selectedFile);
+
+                // 실제 서버 URL로 변경하세요.
+                const serverUrl = 'http://ec2-43-202-152-189.ap-northeast-2.compute.amazonaws.com/api/v1/predict/';
+
+                // POST 요청을 보냅니다.
+                fetch(serverUrl, {
+                    method: 'POST',
+                    cache: 'no-cache',
+                    body: formData,
+                    processData: false,
+                    contentType: false,
+                })
+                .then(response => {
+                    if (response.ok) {
+                        console.log('이미지 업로드 성공.');
+                        return response.json();
+                    } else {
+                        console.error('이미지 업로드 실패.');
+                    }
+                }).then(result => {
+                    console.log(result, result.shape, result.color);
+                })
+                .catch(error => {
+                    console.error('에러:', error);
+                });
+            } else {
+                console.error('이미지를 선택하지 않았거나 오류가 발생했습니다.');
+            }
+        });
+    </script>
+</body>
+</html>
