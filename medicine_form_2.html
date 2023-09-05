@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./reset.css" rel="stylesheet">
+  <link href="./nav.css" rel="stylesheet">
+  <link href="./medicine_form_2.css" rel="stylesheet">
+  <title>ryak</title>
+</head>
+<body>
+  <nav>
+    <a class="left-button" href="./medicine_form_1.html">
+      <img src="./icons/left-chevron.svg">
+      <p>이전</p>
+    </a>
+    <h1>투여약 정보 선택</h1>
+    <a class="right-button" href="./main_edit.html">
+      <p>취소</p>
+    </a>
+  </nav>
+
+  <section class="med-info-section">
+
+    <div class="med-info-container">
+      <h1 class="container-title">투여약 이름</h1>
+      <input id="input-med-name" class="med-name-input" type="text" placeholder="투여약의 이름을 입력하세요.">
+    </div>
+
+    <div id="div-med-kind" class="med-info-container">
+      <h1 class="container-title">투여약 종류 선택</h1>
+      <a class="med-type-button">캡슐</a>
+      <a class="med-type-button">정제</a>
+      <a class="med-type-button">액체</a>
+      <a class="med-type-button">국소성</a>
+      <a class="med-type-button">기기</a>
+      <a class="med-type-button">로션</a>
+      <a class="med-type-button">분무제</a>
+    </div>
+
+    <div class="med-info-container">
+      <h1 class="container-title">투여약 용량 입력</h1>
+      <input id="input-med-dose" class="med-name-input" type="text" placeholder="투여약의 용량을 입력하세요.">
+    </div>
+
+    <div id="div-med-dose-unit" class="med-info-container">
+      <h1 class="container-title">투여약 단위 선택</h1>
+      <a class="med-type-button">mg</a>
+      <a class="med-type-button">mcg</a>
+      <a class="med-type-button">g</a>
+      <a class="med-type-button">mL</a>
+      <a class="med-type-button">%</a>
+    </div>
+
+    <div class="med-info-container">
+      <a class="go-next-button">다음</a>
+    </div>
+
+    <script src="./nav.js"></script>
+    <script src="./medicine_form_2.js"></script>
+  </section>
+</body>
+</html>

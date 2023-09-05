@@ -58,8 +58,7 @@ captureButton.addEventListener('click', async () => {
   const medInfo = data.drug;
 
   // 로컬스토리지에 데이터 저장
-  localStorage.setItem(JSON.stringify({
-    name: medInfo.name,
+  localStorage.setItem(medInfo.name, JSON.stringify({
     shape: medInfo.shape,
     color: medInfo.color,
     dosage_form: medInfo.dosage_form,
