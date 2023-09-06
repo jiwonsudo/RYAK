@@ -45,6 +45,7 @@ captureButton.addEventListener('click', async () => {
   const formData = new FormData();
 
   formData.append('raw_image', file);
+  console.log(file);
 
   fetch('http://ec2-43-202-152-189.ap-northeast-2.compute.amazonaws.com/api/v1/predict/', {
     method: 'POST',
