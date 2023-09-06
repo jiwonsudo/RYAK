@@ -4,7 +4,7 @@ const captureButton = document.getElementById('captureButton');
 // 미디어 장치에 액세스하여 카메라 영상 표시
 async function startCamera() {
   try {
-    const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+    const stream = await navigator.mediaDevices.getUserMedia({ video: true, facingMode: 'environment' });
     videoElement.srcObject = stream;
   } catch (error) {
     console.error('카메라 액세스 에러:', error);
@@ -67,4 +67,3 @@ captureButton.addEventListener('click', async () => {
     console.error('Error:', error);
   });
 });
-

@@ -96,5 +96,16 @@ medicinesSection.appendChild(medicineContainer);
 });
 
 document.querySelector('.manual-input-section').addEventListener('click', () => {
+  localStorage.removeItem('resData');
   window.location.href = './medicine_form_1.html';
+});
+
+document.querySelector('.left-button').addEventListener('click', () => {
+  localStorage.removeItem('resData');
+  window.location.href = './camera.html';
+});
+
+document.querySelector('.right-button').addEventListener('click', () => {
+  localStorage.removeItem('resData');
+  window.location.href = './index.html';
 });
