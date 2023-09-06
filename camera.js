@@ -39,34 +39,29 @@ captureButton.addEventListener('click', async () => {
   }
   const blob = new Blob([ab], {type: mimeString});
   const file = new File([blob], 'captured.png')
-  
-  // 저장된 이미지 데이터를 사용하거나 전송할 수 있습니다.
-  console.log('캡처된 이미지:', dataUrl);
 
   const formData = new FormData();
 
   formData.append('raw_image', file);
+  console.log(formData.get('raw_image'));
 
-  const response = await fetch('http://ec2-43-202-152-189.ap-northeast-2.compute.amazonaws.com/api/v1/predict/', {
+  fetch('http://ec2-43-202-152-189.ap-northeast-2.compute.amazonaws.com/api/v1/predict/', {
     method: 'POST',
     cache: 'no-cache',
     body: formData,
     processData: false,
     contentType: false,
+  }).then(response => {
+    if (response.ok) {
+      console.log(response);
+      return response.json();
+    } else {
+      throw new Error('Something went wrong');
+    }
+  }).then(data => {
+    console.log(data);
+  }).catch(error => {
+    console.error('Error:', error);
   });
-  const data = await response.json();
-  const medInfo = data.drug;
-
-  // 로컬스토리지에 데이터 저장
-  localStorage.setItem(medInfo.name, JSON.stringify({
-    shape: medInfo.shape,
-    color: medInfo.color,
-    dosage_form: medInfo.dosage_form,
-    dosage: medInfo.dosage,
-    dosage_unit: medInfo.dosage_unit,
-  }));
-
-  // 촬영 후 페이지 이동
-  window.location.href = '/main.html';
 });
 

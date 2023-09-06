@@ -57,12 +57,12 @@ for (let i = 0; i < localStorage.length; i++) {
 }
 
 document.querySelector('.left-button').addEventListener('click', () => {
-  window.location.href = './main.html';
+  window.location.href = './index.html';
 });
 
 document.querySelector('.right-button').addEventListener('click', () => {
   medToDelete.forEach((medKey) => {
     localStorage.removeItem(medKey);
   });
-  window.location.href = './main.html';
+  window.location.href = '.index.html';
 });

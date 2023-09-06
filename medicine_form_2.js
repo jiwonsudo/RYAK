@@ -59,10 +59,10 @@ document.querySelector('.go-next-button').addEventListener('click', () => {
       break;
     }
   }
-  location.href = './main.html';
+  location.href = './index.html';
 });
 
 document.querySelector('.right-button').addEventListener('click', () => {
   localStorage.removeItem('tempStore');
-  location.href = './main.html';
+  location.href = './index.html';
 });
