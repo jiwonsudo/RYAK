@@ -3,6 +3,7 @@ const btnsMedType = document.querySelectorAll('#div-med-kind a');
 const inputMedDose = document.getElementById('input-med-dose');
 const btnsMedDoseType = document.querySelectorAll('#div-med-dose-unit a');
 const btnGoNext = document.querySelector('.go-next-button');
+const btnCancel = document.querySelector('.right-button');
 
 let medName = '';
 let medKind = '';
@@ -65,6 +66,11 @@ btnGoNext.addEventListener('click', () => {
     return;
   }
 
+  if (isNaN(medDose)) {
+    alert('복용량은 숫자만 입력해주세요.');
+    return;
+  }
+
   while (medDose.includes(' ')) {
     medDose = medDose.replace(' ', '');
   }
@@ -76,14 +82,12 @@ btnGoNext.addEventListener('click', () => {
     const value = JSON.parse(localStorage.getItem(key));
 
     if (value.name === medName) {
-      alert('이미 등록된 약입니다.');
+      alert('이미 등록된 이름입니다.');
       return;
     }
-
-    if (key.startsWith('manual_')) id++;
   }
 
-  localStorage.setItem(`manual_${id}`, JSON.stringify({
+  localStorage.setItem('tempStore', JSON.stringify({
     name: medName,
     dosage_form: medKind,
     dosage: medDose,
@@ -91,4 +95,9 @@ btnGoNext.addEventListener('click', () => {
   }));
 
   location.href = 'medicine_form_2.html';
+});
+
+btnCancel.addEventListener('click', () => {
+  localStorage.removeItem('tempStore');
+  location.href = 'main.html';
 });

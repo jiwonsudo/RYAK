@@ -1,0 +1,132 @@
+.med-info-section {
+  margin-top: 80px;
+  width: 100%;
+}
+
+.med-graphic-container {
+  width: 30vw;
+  margin: 90px auto 30px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background-color: #e5e5ea;
+  overflow: hidden;
+}
+
+.med-graphic-container img {
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.med-info-container {
+  width: 90%;
+  margin: 0 auto 30px;
+}
+
+.container-title {
+  font-weight: 500;
+  font-size: 1em;
+  margin-bottom: 0.8em;
+}
+
+.med-shapes, .med-colors {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.med-shape, .med-color {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.med-shape {
+  width: 17%;
+  background-color: #e5e5ea;
+}
+
+.med-shape:hover {
+  cursor: pointer;
+}
+
+.med-shape img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.med-color {
+  width: 17%;
+}
+
+.med-color:hover {
+  cursor: pointer;
+}
+
+#red, #redBg {
+  background-color: rgb(242, 129, 115);
+}
+
+#orange, #orangeBg {
+  background-color: rgb(241, 152, 101);
+}
+
+#yellow, #yellowBg {
+  background-color: rgb(246, 233, 156);
+}
+
+#green, #greenBg {
+  background-color: rgb(174, 238, 124);
+}
+
+#deepGreen, #deepGreenBg {
+  background-color: rgb(127, 207, 158);
+}
+
+#turquoise, #turquoiseBg {
+  background-color: rgb(117, 192, 176);
+}
+
+#skyBlue, #skyBlueBg {
+  background-color: rgb(127, 218, 231);
+}
+
+#deepBlue, #deepBlueBg {
+  background-color: rgb(156, 187, 205);
+}
+
+#purple, #purpleBg {
+  background-color: rgb(196, 106, 242);
+}
+
+#redViolet, #redVioletBg {
+  background-color: rgb(209, 104, 174);
+}
+
+#pink, #pinkBg {
+  background-color: rgb(254, 185, 229);
+}
+
+#brown, #brownBg {
+  background-color: rgb(201, 132, 115);
+}
+
+#gray, #grayBg {
+  background-color: rgb(212, 212, 212);
+}
+
+.go-next-button {
+  width: 90%;
+  height: 40px;
+  margin: 80px auto 30px;
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  background-color: #007AFF;
+  color: #F2F2F7;
+  border-radius: 10px;
+}
+
+.go-next-button:hover {
+  cursor: pointer;
+}

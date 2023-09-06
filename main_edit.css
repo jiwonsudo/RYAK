@@ -62,7 +62,6 @@ body {
 .medicine-image-container {
   height: 75%;
   aspect-ratio: 1 / 1;
-  background: linear-gradient(blue, darkblue);
   border-radius: 50%;
 }
 
