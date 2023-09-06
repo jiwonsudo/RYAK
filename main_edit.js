@@ -64,5 +64,5 @@ document.querySelector('.right-button').addEventListener('click', () => {
   medToDelete.forEach((medKey) => {
     localStorage.removeItem(medKey);
   });
-  window.location.href = '.index.html';
+  window.location.href = './index.html';
 });

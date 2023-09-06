@@ -81,7 +81,7 @@ btnGoNext.addEventListener('click', () => {
     const key = localStorage.key(i);
     const value = JSON.parse(localStorage.getItem(key));
 
-    if (value.name === medName) {
+    if (value.name === medName && key !== 'tempStore') {
       alert('이미 등록된 이름입니다.');
       return;
     }
@@ -99,5 +99,24 @@ btnGoNext.addEventListener('click', () => {
 
 btnCancel.addEventListener('click', () => {
   localStorage.removeItem('tempStore');
-  location.href = 'main.html';
+  location.href = './index.html';
 });
+
+if (localStorage.getItem('tempStore')) {
+  const data = JSON.parse(localStorage.getItem('tempStore'));
+
+  inputMedName.value = data.name;
+  inputMedDose.value = data.dosage;
+
+  btnsMedType.forEach(button => {
+    if (button.innerText === data.dosage_form) {
+      button.click();
+    }
+  });
+
+  btnsMedDoseType.forEach(button => {
+    if (button.innerText === data.dosage_unit) {
+      button.click();
+    }
+  });
+}

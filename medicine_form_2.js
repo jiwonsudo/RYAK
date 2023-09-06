@@ -17,12 +17,12 @@ document.getElementById('triangle').addEventListener('click', () => {
   mainShapeImg.src = './medicine-images/5.png';
 });
 
-const colors = ['red', 'orange', 'yellow', 'green', 'deepGreen', 'turquoise', 'skyBlue', 'deepBlue', 'purple', 'redViolet', 'pink', 'brown', 'gray'];
+const colors = ['red', 'orange', 'yellow', 'green', 'deepGreen', 'turquoise', 'skyBlue', 'deepBlue', 'purple', 'redViolet', 'pink', 'brown', 'white'];
 
 colors.forEach((color, idx) => {
   document.getElementById(color).addEventListener('click', () => {
     const currentShapeNumber = mainShapeImg.src.split('/')[4].split('')[0];
-    if (color === 'gray') {
+    if (color === 'white') {
       mainShapeImg.src = `./medicine-images/${currentShapeNumber}.png`;
       return;
     }

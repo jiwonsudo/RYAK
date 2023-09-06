@@ -43,7 +43,6 @@ captureButton.addEventListener('click', async () => {
   const formData = new FormData();
 
   formData.append('raw_image', file);
-  console.log(formData.get('raw_image'));
 
   fetch('http://ec2-43-202-152-189.ap-northeast-2.compute.amazonaws.com/api/v1/predict/', {
     method: 'POST',
@@ -55,11 +54,15 @@ captureButton.addEventListener('click', async () => {
     if (response.ok) {
       console.log(response);
       return response.json();
+    } else if (response.status === 204) {
+      alert('약을 찾을 수 없습니다. 다시 시도하거나, 직접 입력해주세요.');
+      throw new Error('검색 실패');
     } else {
-      throw new Error('Something went wrong');
+      throw new Error('에러');
     }
   }).then(data => {
-    console.log(data);
+    localStorage.setItem('resData', JSON.stringify(data));
+    window.location.href = './results.html';
   }).catch(error => {
     console.error('Error:', error);
   });

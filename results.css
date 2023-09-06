@@ -1,26 +1,6 @@
-body {
-  background-color: #E5E5EA;
-}
-
-.add-section {
-  width: 90%;
-  margin: 80px auto 0;
-}
-
-.add-button {
-  width: calc(100% - 1em);
-  height: 40px;
-  padding-left: 1em;
-  display: block;
-  background-color: #F7F7F7;
-  border-radius: 10px;
-  line-height: 40px;
-  color: #007AFF;
-}
-
 .medicines-section {
   width: 90%;
-  margin: 40px auto 0;
+  margin: 100px auto 0;
 }
 
 .medicines-section-title {
@@ -88,19 +68,44 @@ body {
   font-weight: 300;
 }
 
-.delete-button {
+.add-button {
   height: 100%;
   aspect-ratio: 0.7 / 1;
   position: absolute;
   right: 0px;
-  background-color: #FF3B30;
+  background-color: #007AFF;
   border: none;
   /* border-radius: 0 10px 10px 0; */
 }
 
-.delete-button img {
+.add-button img {
   height: 40%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
 }
 
+.manual-input-section {
+  width: 90%;
+  height: 50px;
+  margin: 50px auto 30px;
+  background-color: #e5e5ea;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.manual-input-text {
+  text-align: center;
+}
+.manual-input-text p {
+  margin-bottom: 0.3em;
+  font-size: 0.7em;
+  color: #8E8E93;
+}
+
+.manual-input-text h1 {
+  font-size: 1em;
+  color: #000000;
+  font-weight: 500;
+}
