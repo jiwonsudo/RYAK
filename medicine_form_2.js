@@ -21,7 +21,7 @@ const colors = ['red', 'orange', 'yellow', 'green', 'deepGreen', 'turquoise', 's
 
 colors.forEach((color, idx) => {
   document.getElementById(color).addEventListener('click', () => {
-    const currentShapeNumber = mainShapeImg.src.split('/')[5].split('')[0];
+    const currentShapeNumber = mainShapeImg.src.split('/')[4].split('')[0];
     if (color === 'white') {
       mainShapeImg.src = `./medicine-images/${currentShapeNumber}.png`;
       return;
