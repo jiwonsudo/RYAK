@@ -52,7 +52,7 @@ document.querySelector('.go-next-button').addEventListener('click', () => {
     const key = localStorage.key(i);
     if (key === 'tempStore') {
       let medData = JSON.parse(localStorage.getItem(key));
-      medData.image = mainShapeImg.src.split('/')[4].split('.')[0];
+      medData.image = mainShapeImg.src.split('/')[5].split('.')[0];
       medData.bg_color = getComputedStyle(mainBg).backgroundColor;
       localStorage.setItem(`manual_${maxKeyNumber + 1}`, JSON.stringify(medData));
       localStorage.removeItem(key);
